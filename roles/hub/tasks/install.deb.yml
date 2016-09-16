@@ -1,3 +1,7 @@
+- name: add hub apt repository
+  apt_repository: repo='ppa:cpick/hub'
+  sudo: yes
+
 - name: ensure hub is installed
   apt: name=hub state=present
   sudo: yes
