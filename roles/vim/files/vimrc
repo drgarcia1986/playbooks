@@ -41,6 +41,11 @@ set smarttab
 
 set backspace=eol,start,indent
 
+""""""""""""""
+" Find Files "
+""""""""""""""
+set path+=**
+
 """""""""""""""""""""""""
 " Command mode settings "
 """""""""""""""""""""""""
@@ -118,6 +123,7 @@ cnoreabbrev Qall qall
 """""""""""""""""
 iab gL logger = logging.getLogger(__name__)
 iab pdb import pdb; pdb.set_trace()
+iab pymain if __name__ == "__main__":
 
 """""""""""""""""
 " Auto commands "
