@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged/')
 " Plugins Installation
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'simeji/winresizer'
 Plug 'tpope/vim-dispatch', {'for': 'python'}
 Plug 'drgarcia1986/python-compilers.vim', {'for': 'python'}
 Plug 'fatih/vim-go', {'for': 'go'}
@@ -28,6 +29,11 @@ Plug 'fatih/vim-go', {'for': 'go'}
 call plug#end()
 
 filetype plugin indent on
+
+"""""""""""""""""""
+" Delay eliminate "
+"""""""""""""""""""
+set timeoutlen=1000 ttimeoutlen=0
 
 """"""""""""""""""""""""""""""""
 " Tab and indentation settings "
@@ -143,6 +149,15 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " Omni completion "
 """""""""""""""""""
 set omnifunc=syntaxcomplete#Complete
+
+""""""""
+" Maps "
+""""""""
+" navigation splits
+nnoremap <Right> <C-w>l
+nnoremap <Left> <C-w>h
+nnoremap <Up> <C-w>k
+nnoremap <Down> <C-w>j
 
 """"""""""""""""""""
 " Plugins Settings "
