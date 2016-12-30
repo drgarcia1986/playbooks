@@ -19,6 +19,9 @@ source /usr/local/bin/virtualenvwrapper.sh
 source /usr/bin/virtualenvwrapper.sh
 {% endif %}
 
+# GIT Alias
+alias gpush="git push -u origin \`git status | grep \"On branch\" | cut -c 11-\`"
+
 # swap caps <-> escape
 setxkbmap -option caps:swapescape
 
@@ -31,6 +34,10 @@ export PATH=$PATH:/usr/lib/node_modules
 # Golan stuff
 export GOPATH={{ golang_path }}
 export PATH=$PATH:{{ golang_path }}/bin
+alias go-doc-offline="godoc -http=:8000"
 
 # Tmux stuff
 export TERM=screen-256color-bce
+
+# Remove delay
+KEYTIMEOUT=1
