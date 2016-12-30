@@ -19,9 +19,8 @@ endif
 call plug#begin('~/.vim/plugged/')
 
 " Plugins Installation
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'simeji/winresizer'
+Plug 'bling/vim-airline' |  Plug 'vim-airline/vim-airline-themes'
+Plug 'simeji/winresizer', {'on': 'WinResizerStartResize'}
 Plug 'tpope/vim-dispatch', {'for': 'python'}
 Plug 'drgarcia1986/python-compilers.vim', {'for': 'python'}
 Plug 'fatih/vim-go', {'for': 'go'}
@@ -153,11 +152,14 @@ set omnifunc=syntaxcomplete#Complete
 """"""""
 " Maps "
 """"""""
-" navigation splits
+" splits navigation
 nnoremap <Right> <C-w>l
 nnoremap <Left> <C-w>h
 nnoremap <Up> <C-w>k
 nnoremap <Down> <C-w>j
+
+" Start WinResizerPlugin
+nnoremap <C-e> :exe "WinResizerStartResize"<CR>
 
 """"""""""""""""""""
 " Plugins Settings "
